@@ -16,7 +16,7 @@ const ImageLinkForm = ({onInputChange, facesDetected}) => {
             <p className='f3 code'>1. Enter image URL</p>
             <p className='f3 code'>2. Click on the Smart Brain</p>
             <div className='center'>
-                <input className='input-url f4 pa2 w-70 shadow-2 center z-2' type='text' onChange={onInputChange} />
+                <input className='input-url f4 pa0 w-70 shadow-2 center z-2' type='text' onChange={onInputChange} />
             </div>
         </div>
     )
