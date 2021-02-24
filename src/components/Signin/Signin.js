@@ -23,9 +23,7 @@ class Signin extends React.Component {
         if (!this.state.signInPass || !this.state.signInLogin) {
             alert('Please enter your Login and Password.')
         } else {
-            console.log('ENV:', process.env.REACT_APP_SERVER_URL)
-
-            fetch(path.join(process.env.REACT_APP_SERVER_URL,'signin'), {
+            fetch(String.prototype.concat(process.env.REACT_APP_SERVER_URL,'signin'), {
                 method: 'post',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
