@@ -36,7 +36,7 @@ class Register extends React.Component {
             if (!this.emailCheck(this.state.newEmail)) {
                 alert('Invalid e-mail address.')
             } else {
-                fetch('https://tranquil-ocean-24116.herokuapp.com/register', {
+                fetch(this.props.SERVER_URL + 'register', {
                     method: 'post',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({

@@ -22,7 +22,7 @@ class Signin extends React.Component {
         if (!this.state.signInPass || !this.state.signInLogin) {
             alert('Please enter your Login and Password.')
         } else {
-            fetch('https://tranquil-ocean-24116.herokuapp.com/signin', {
+            fetch(this.props.SERVER_URL + 'signin', {
                 method: 'post',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({

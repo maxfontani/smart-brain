@@ -43,6 +43,7 @@ const particlesParams = {
 }
 
 const initialState = {
+  SERVER_URL: 'https://smart-brain-serv.herokuapp.com/',
   input: '',
   inputUrl: '',
   boxes: [],
