@@ -1,4 +1,5 @@
 import React from 'react'
+import path from 'path'
 
 class Signin extends React.Component {
     constructor(props) {
@@ -22,7 +23,9 @@ class Signin extends React.Component {
         if (!this.state.signInPass || !this.state.signInLogin) {
             alert('Please enter your Login and Password.')
         } else {
-            fetch(this.props.SERVER_URL + 'signin', {
+            console.log('ENV:', process.env.REACT_APP_SERVER_URL)
+
+            fetch(path.join(process.env.REACT_APP_SERVER_URL,'signin'), {
                 method: 'post',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({

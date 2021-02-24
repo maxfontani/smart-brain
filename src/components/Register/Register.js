@@ -1,4 +1,5 @@
 import React from 'react'
+import path from 'path'
 
 class Register extends React.Component {
 
@@ -36,7 +37,8 @@ class Register extends React.Component {
             if (!this.emailCheck(this.state.newEmail)) {
                 alert('Invalid e-mail address.')
             } else {
-                fetch(this.props.SERVER_URL + 'register', {
+                console.log('ENV:', process.env.REACT_APP_SERVER_URL)
+                fetch(path.join(process.env.REACT_APP_SERVER_URL, 'register'), {
                     method: 'post',
                     headers: {'Content-Type': 'application/json'},
                     body: JSON.stringify({
